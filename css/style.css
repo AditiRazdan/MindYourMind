@@ -1,0 +1,176 @@
+/* navbar || on all pages */
+.navbar { 
+    border-top: 1px solid #e0e0e0; 
+    border-bottom: 1px solid #e0e0e0; 
+    background-color: #2c3e50; 
+}
+.navbar .navbar-brand img {
+    width: 40px;
+    height: 40px;
+}
+
+/* title || header for all pages */
+.title{
+    text-align: center;
+    background-color: #f7f7f7; 
+    color: #2c3e50; 
+    border: 5px solid #3498db; 
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+
+/* chatbot */
+.chatbot-container {
+    width: 350px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    position: fixed; 
+    right: 20px; 
+    bottom: 20px;
+}
+
+.chat-header {
+    background-color: #2980b9; 
+    color: #ffffff;
+    padding: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.chat-window {
+    height: 300px;
+    overflow-y: auto; /* for scroll effect */
+    padding: 15px;
+    background: #ecf0f1; 
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-window .message {
+    margin-bottom: 12px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.chat-window .user-message {
+    text-align: right;
+    color: #3498db; /* user messages */
+    font-weight: 600;
+}
+
+.chat-window .bot-message {
+    text-align: left;
+    color: #34495e; /* bot messages */
+}
+
+/* user input */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    background: #ffffff;
+    padding: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+    color: #34495e; 
+}
+
+.chat-input button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.chat-input button:hover {
+    background-color: #2980b9;
+}
+
+/* home -- text box 1 */
+.home-container {
+    padding-top: 30px;
+    bottom: 450px;
+    text-align: center;
+}
+
+.home-background {
+    width: 1000px;
+    background: #2980b9; 
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    margin: 20px auto;
+}
+
+.home-text {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    color: #ecf0f1; 
+}
+
+/* home -- text box 2 */
+.home-container2 {
+    padding-top: 65px;
+    bottom: 450px;
+    text-align: center;
+}
+
+.home-background2 {
+    width: 1000px;
+    background: #a2d9ff; /* Soft blue for a calm, sophisticated feel */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    margin: 20px auto;
+}
+
+/* headers || on all directed pages */
+
+.causes {
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 1.25rem;
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+/* research || on all directed pages */
+
+.information {
+    width: 1000px;
+    background: #ecf0f1; 
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    bottom: 450px;
+    font-family: 'Georgia', serif;
+    padding: 30px;
+    margin: 20px auto;
+    color: #2c3e50; 
+}
+
+/* keeps all embedded links centered */
+
+  .centeralign{
+    text-align: center;
+  }
