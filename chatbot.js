@@ -6,10 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // predefined responses
     const responses = {
         "hello": "Hi there! I'm here for you. How are you feeling today?",
-        "overwhelmed": "I'm sorry you're feeling overwhelmed. It's completely normal to feel this way sometimes. Would you like to talk about what's causing it?",
-        "sad": "I'm here to listen. Feeling sad can be hard to manage, but you're not alone. What’s been on your mind?",
-        "tired": "It sounds like you’ve been running on empty. Rest is so important. Is there something specific wearing you out?",
-        "thank you": "You're so welcome! I'm glad I could help. Let me know if there's anything else on your mind.",
+        "hi": "Hi there! I'm here for you. How are you feeling today?",
+        "hey": "Hi there! I'm here for you. How are you feeling today?",
+        "overwhelmed": "I'm sorry you're feeling overwhelmed. It's completely normal to feel this way sometimes. Would you like to talk about what's causing it? You can also visit the time management page above.",
+        "stressed": "I'm sorry you're feeling overwhelmed. It's completely normal to feel this way sometimes. Would you like to talk about what's causing it? You can also visit the time management page above.",
+        "sad": "I'm here to listen. Feeling sad can be hard to manage, but you're not alone. What’s been on your mind? You can also visit the get help page above.",
+        "tired": "It sounds like you’ve been running on empty. Rest is so important. Is there something specific wearing you out? You can also visit the health tracker page above.",
+        "thank you", "thanks": "You're so welcome! I'm glad I could help. Let me know if there's anything else on your mind.",
+        "thanks", "thanks": "You're so welcome! I'm glad I could help. Let me know if there's anything else on your mind.",
         "bye": "Goodbye! Remember, you matter and deserve kindness. Take care!",
         "happy": "That's wonderful to hear! What’s making you happy today?",
         "excited": "Exciting times! Tell me more—what’s got you feeling this way?",
@@ -54,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // identify the mood of the message
     const identifyMood = (message) => {
         const positiveWords = ["happy", "excited", "great", "good", "awesome", "fantastic"];
-        const negativeWords = ["sad", "overwhelmed", "tired", "stressed", "down", "bad"];
+        const negativeWords = ["down", "bad", "upset", "unhappy", "depressed", "miserable"];
         if (positiveWords.some((word) => message.includes(word))) {
             return "positive";
         } else if (negativeWords.some((word) => message.includes(word))) {
