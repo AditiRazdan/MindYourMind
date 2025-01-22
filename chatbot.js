@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "stressed": "I'm sorry you're feeling overwhelmed. It's completely normal to feel this way sometimes. Would you like to talk about what's causing it? You can also visit the time management page above.",
         "sad": "I'm here to listen. Feeling sad can be hard to manage, but you're not alone. What’s been on your mind? You can also visit the get help page above.",
         "tired": "It sounds like you’ve been running on empty. Rest is so important. Is there something specific wearing you out? You can also visit the health tracker page above.",
-        "thank you", "thanks": "You're so welcome! I'm glad I could help. Let me know if there's anything else on your mind.",
-        "thanks", "thanks": "You're so welcome! I'm glad I could help. Let me know if there's anything else on your mind.",
+        "thank you": "You're so welcome! I'm glad I could help. Let me know if there's anything else on your mind.",
+        "thanks": "You're so welcome! I'm glad I could help. Let me know if there's anything else on your mind.",
         "bye": "Goodbye! Remember, you matter and deserve kindness. Take care!",
         "happy": "That's wonderful to hear! What’s making you happy today?",
         "excited": "Exciting times! Tell me more—what’s got you feeling this way?",
@@ -75,9 +75,17 @@ document.addEventListener("DOMContentLoaded", () => {
         // add user message to chat
         appendMessage("user-message", userMessage);
 
-        // determine mood and response
-        const mood = identifyMood(userMessage);
-        const botResponse = responses[userMessage] || getFallbackResponse(mood);
+        // prioritize exact or partial match from responses
+        const matchedKey = Object.keys(responses).find((key) => userMessage.includes(key));
+        let botResponse = matchedKey ? responses[matchedKey] : null;
+
+        // if no match, use a fallback response based on mood
+        if (!botResponse) {
+            const mood = identifyMood(userMessage);
+            botResponse = getFallbackResponse(mood);
+        }
+
+        // add bot response to chat
         appendMessage("bot-message", botResponse);
 
         // clear input field
